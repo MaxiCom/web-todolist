@@ -4,7 +4,6 @@ todoApp.controller("todoCtrl", function ($scope, $http) {
 	$scope.formData = {};
 
 	$http.get("/api/todos")
-	
 	.success(function(data) {
 		$scope.todos = data;
 	})

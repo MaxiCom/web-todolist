@@ -1,8 +1,9 @@
 {
-  "name": "todo-angular-node",
-  "version": "1.0.0",
-  "description": "none",
+  "name": "todolist-mean-achitecture",
+  "version": "0.1.0",
+  "description": "A todolist with a MEAN architecture",
   "main": "server.js",
+  
   "dependencies": {
     "body-parser": "^1.4.3",
     "express": "^4.13.4",
@@ -11,9 +12,8 @@
     "morgan": "^1.1.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Maxime MORLET",
+  "license": "none"
 }

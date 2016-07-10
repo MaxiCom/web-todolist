@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 app.use(methodOverride())
 
-
 // define mongo model
 var Todo = mongoose.model("Todo", {
 	text: String
@@ -46,8 +45,6 @@ app.post("/api/todos", function(req, res) {
 });
 
 app.delete("/api/todos/:todo_id", function(req, res) {
-	
-
 	Todo.remove({
 		_id: req.params.todo_id
 	}, function (err, todo) {
@@ -60,7 +57,6 @@ app.delete("/api/todos/:todo_id", function(req, res) {
 			res.json(todos);
 		});
 	});
-
 });
 
 app.get("*", function (req, res) {
