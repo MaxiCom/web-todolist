@@ -1,0 +1,30 @@
+@import "scss/_var";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0 auto;
+
+	font-family: "Open Sans", Verdana;
+
+	text-align: center;
+
+	background-color: #FDFFF7;
+
+
+	h1 {
+		color: $text-color;
+	}
+
+	h1, .fa-times {
+		cursor: pointer;
+	}
+}

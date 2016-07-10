@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- Metas -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+		<!-- Metas SEO -->
+		<meta author="Maxime MORLET">
+		<meta description="A todolist with MEAN architecture">
+		<meta name="robots" content="all"/>
+
+		<!-- Fonts and libs -->
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="http://s.mlcdn.co/animate.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="styles/global.css">
+
+		<!-- Title -->
+		<title>Mean todolist</title>
+
+	</head>
+
+	<body ng-app="todoApp">
+		<h1 class="animated rubberBand">Todo list</h1>
+
+		<div ng-controller="todoCtrl" id="todoList">
+			<div ng-repeat="todo in todos">
+				<i class="fa fa-times" ng-click="deleteTodo(todo._id)"></i>{{ todo.text }}
+			</div>
+			<form>
+				<input type="text" autofocus pattern=".{5,255}" ng-model="formData.text">
+				<input type="submit" value="Add" ng-click="createTodo()"/>
+			</form>
+		</div>
+
+		<!-- Libs and scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script type="text/javascript" src="core.js"></script>
+	</body>
+</html>
