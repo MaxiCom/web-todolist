@@ -31,8 +31,8 @@
 
 		<div ng-controller="todoCtrl" id="todoList">
 			<div id="todoItems">
-				<div ng-repeat="todo in todos">
-					<i class="fa fa-times" ng-click="deleteTodo(todo._id)"></i>{{ todo.text }}
+				<div ng-cloak ng-repeat="todo in todos">
+					<i class="fa fa-times" ng-click="deleteTodo(todo._id)"></i><span ng-bind="todo.text"></span>
 				</div>
 				<h3 ng-show="!todos.length">Il n'y a pas d'élement dans cette liste.</h3>
 			</div>
