@@ -1,3 +1,4 @@
+//Define variables
 var express = require("express");
 var app = express();
 var mongoose = require("mongoose");
@@ -5,6 +6,7 @@ var morgan = require("morgan");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
+//Connect to mongo database
 mongoose.connect("mongodb://localhost");
 
 app.use(express.static(__dirname + "/public"));
@@ -14,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 app.use(methodOverride())
 
-// define mongo model
+//Define todo mongo model
 var Todo = mongoose.model("Todo", {
 	text: String
 });
