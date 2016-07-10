@@ -5,4 +5,4 @@ Technos utilisées:
     -Mongodb
     -Nodejs (Express)
     -AngularJs
-    -Sass
+    -Sass (public/scss -> public/styles)
